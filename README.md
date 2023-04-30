@@ -217,7 +217,7 @@ int main() {
     return 0;
 }
 ```
-<img src="https://imgur.com/a/RQOVBk4">
+
 
 # Bài 11. Kiểm tra tam giác
 ```
