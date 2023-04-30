@@ -218,6 +218,7 @@ int main() {
 }
 ```
 
+![alt](https://user-images.githubusercontent.com/131541155/235352634-d12d93e7-e47e-49e9-a80f-8e4547dec7e5.png)
 
 # Bài 11. Kiểm tra tam giác
 ```
@@ -491,6 +492,7 @@ int main() {
     return 0;
 }
 ```
+![alt](https://user-images.githubusercontent.com/131541155/235352644-5eb1b33d-ba1b-45e7-bce8-f40770fbf9a0.png)
 # Bài 21. Frog
 ```
 #include <stdio.h>
@@ -709,6 +711,7 @@ int main() {
     return 0;
 }
 ```
+![alt](https://user-images.githubusercontent.com/131541155/235352654-f83479fc-70fc-433c-abf7-0e7f8bfe8a9c.png)
 #  Bài 31. Bizon the Champion
 ```
 #include <stdio.h>
@@ -863,3 +866,4 @@ int main() {
     return 0;
 }
 ```
+![alt](https://user-images.githubusercontent.com/131541155/235352680-7b618c98-6ba1-40e4-9f0b-e2e06a91e57e.png)
