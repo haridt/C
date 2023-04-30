@@ -12,14 +12,12 @@ int main(){
 ```
 # Bài 2. Tính toán giá trị biểu thức 2
 ```
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+#include<stdio.h>
 
-int main() {
-
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+int main(){
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    printf("%lld",1ll*a*(b+c)+1ll*b*(a+c));
     return 0;
 }
 
@@ -219,6 +217,8 @@ int main() {
     return 0;
 }
 ```
+<img src="https://imgur.com/a/RQOVBk4">
+
 # Bài 11. Kiểm tra tam giác
 ```
 #include <stdio.h>
