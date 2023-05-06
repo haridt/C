@@ -868,5 +868,5 @@ int main() {
 ```
 ![alt](https://user-images.githubusercontent.com/131541155/235352680-7b618c98-6ba1-40e4-9f0b-e2e06a91e57e.png)
 
-<img width="920" alt="image" src="https://user-images.githubusercontent.com/131541155/236601482-5b222da3-620b-44cb-be9c-a1039482082e.png">
+
 
