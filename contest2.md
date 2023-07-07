@@ -375,5 +375,604 @@ int main() {
 ```
 ![image](https://github.com/haridt/contest1/assets/131541155/d2c3d399-7f04-49a3-afa0-a858d79bf15c)
 # Bài 21:
+```
+ #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for(int i=0; i<n; i++){
+        for(int j=0;j<n;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for(int i=1; i<=n; i++){
+        for(int j =1;j<=n;j++){
+            if(i==1 || i==n ||j==1 || j==n){
+                printf("*");
+            }
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for(int i=1; i<=n; i++){
+        for(int j =1;j<=n;j++){
+            if(i==1 || i==n ||j==1 || j==n){
+                printf("*");
+            }
+            else printf("#");
+        }
+        printf("\n");
+    }
+    printf("\n");
+    for(int i=1; i<=n; i++){
+        for(int j =1;j<=n;j++){
+            if(i==1 || i==n || j==1 || j==n){
+                printf("%d ",i);
+            }
+            else printf("  ");
+        }
+        printf("\n");
+    }
+    
+    
+    
+    
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 22:
+```
+ #include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	int n;
+	scanf("%d", &n);
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=i;j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(int i=n; i>=1; i--){
+		for(int j=i; j>=1;j--){
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<=n-i;j++){
+			printf(" ");
+		}
+		for(int j=1;j<=i;j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for(int i=1; i<=n; i++){
+		for(int j=1; j<i;j++){
+			printf(" ");
+		}
+		for(int j=i;j<=n;j++){
+			printf("*");
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	for( int i=1; i<=n;i++){
+		for(int j=1;j<=i;j++){
+			if(i ==1 || i == 2 || i==n || j==1 || j == i ){
+				printf("*");
+			}
+			if(i >= 3 && i < n){
+				if( j >= 2 && j <n){
+					printf(" ");
+				}
+			}
+		}
+		printf("\n");
+	}
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 23:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	int n;
+	scanf("%d",&n);
+	
+	for(int i=1;i<=n;i++){
+		int res = i*n -(n-1);
+		for(int j = 1 ; j <= n ; j++){
+			printf("%d ", res);
+			res++;
+		}
+		printf("\n");
+	}
+	printf("\n");
+	
+	//
+		for(int i=0;i<n;i++){
+		int res = i +1 ;
+		for(int j = 1 ; j <= n ; j++){
+			printf("%d ", res);
+			res++;
+		}
+		
+		printf("\n");
+	}
+		printf("\n");
+	
+	for(int i=1;i<=n;i++){
+		for(int j=1;j<=n-i;j++){
+			printf("~");
+		}
+		for(int j=n-i;j<n;j++){
+			printf("%d",i);
+		}
+		printf("\n");
+	}
+		printf("\n");
+	
+	for(int i=1;i<=n;i++){
+		int res = i;
+		int dem = n -1 ;
+		for(int j=1;j<=i;j++){
+			printf("%d ",res);
+			
+			res +=dem;
+			dem--;
+		}
+		printf("\n");
+	}
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 24:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	long long a,b; scanf("%lld%lld",&a,&b);
+	long long min = fmin(a,b);
+	long long gt=1;
+	for(int i=1;i<=min;i++){
+		gt*=i;
+	}
+	printf("%lld",gt);
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 25:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+	int n; scanf("%d",&n);
+	int gt=1;
+	double sum=1;
+	for(int i=1;i<n;i++){
+		gt*=i;
+		sum+=1.0/gt;
+	}
+	printf("%.4lf",sum);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 26:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main(){
+
+    int a,b,kt,n;
+    
+    scanf("%d%d%d",&a,&b,&n);
+    for(int x=0;x<=1000;x++){
+        for(int y=0; y<=1000;y++){
+            if(x*a +y*b == n){
+                printf("YES");
+                return 0;
+            }
+
+
+        }
+    }
+
+   
+        printf("NO");
+ 
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 27:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    long long n;
+    scanf("%lld",&n);
+    
+    while(n >= 10){
+        int sum =0;
+        while(n!=0){
+           sum += n % 10;
+           n /= 10;
+           
+  
+        }
+        n= sum;
+        
+  
+                
+ 
+        }
+   printf("%lld",n);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 28:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    long long sum =0;
+    for( int i=1; i<= n; i++){
+        int gt =1;
+        for(int j=1; j<= i; j++){
+            gt *=j ;
+        }
+        sum +=gt;
+    }
+    printf("%lld",sum);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 29:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int x,n;
+    scanf("%d\n",&n);
+    long long sum = 0;
+    for(int i=0; i<n;i++){
+        scanf("%d",&x);
+        if(x %2==0){
+            sum += x ;
+        }
+    }
+    printf("%lld", sum);
+    
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 30:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int x,n; scanf("%d",&n);
+    while(n--){
+      scanf("%d",&x);
+        if( x%2== 0){
+            printf("EVEN\n");
+        }
+        else{
+            printf("ODD\n");
+        }
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+![image](https://github.com/haridt/contest1/assets/131541155/9ff94fdb-97a9-420f-a95c-791b954393dc)
+
+# Bài 31:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n; scanf("%d",&n);
+    double sum =1;
+    for(int i= 1;i<=n; i++){
+        int gt =1;
+        for(int j =1;j <=i;j++){
+            gt *= j;
+        }
+        sum += 1.0/gt;
+    }
+    printf("%.2lf",sum);
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 32:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int x=65;
+    int n; scanf("%d",&n);
+    for(int i =1; i<=n; i++){
+        for(int j=1;j<=i;j++){
+            printf("%c ", x);
+  
+        }
+        printf("\n");
+        x++;
+    }
+ 
+    /* Enter your code hee. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 33:
+```#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n ;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j =1; j<=n-i;j++){
+            printf("  ");
+        }
+        for(int x =1;x<=i*2 -1 ;x++){
+            printf("* ");
+
+
+        }
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 35:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n; scanf("%d",&n);
+    for(int i =1;i<=n;i++){
+        for(int j=i-1;j>0;j--){
+            printf("  ");
+        }
+        for(int j=2*n-(2*i-1);j>0;j--){
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 36:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n; scanf("%d",&n);
+    for(int i =1;i<=n;i++){
+        for(int j=1;j<=n-i;j++){
+            printf("  ");
+        }
+        for(int j=1;j<i*2;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+    for(int i=2;i<=n;i++){
+        for(int j=1;j<=i-1;j++){
+            printf("  ");
+        }
+        for(int j=2*n-(2*i-1);j>0;j--){
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 37:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n; scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            if( i==j || j== n+1-i){
+                printf("%d ",i);
+            }
+            else{
+                printf("  ");
+            }
+        }
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 38: 
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n; scanf("%d",&n);
+    for(int i=1; i<=n;i++){
+        
+        for(int j=1;j<=n;j++){
+            if((i%2==0 && j%2==0)|| (i%2 != 0 && j%2 != 0)){
+                printf("0");
+            }
+            else{
+               printf("1");
+                }
+        }
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 39:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n,x=65,y=98;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        if(i%2 != 0){
+            for(int j=1;j<=n;j++){
+                printf("%c",x);
+                x++;
+            }
+        }
+        else{
+            for(int j=1;j<=n;j++){
+                printf("%c",y);
+                y++;
+            }
+        }
+        if(i %2 != 0 && i >= 1){
+            x -=n-2;
+        }
+        else if(i%2 ==0 && y>=2){
+            y-=n-2;
+        }
+        printf("\n");
+    }
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+# Bài 40:
+```
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=10;j++){
+            printf("%d x %d = %d\n",i,j,i*j);
+        }
+        
+        
+        
+        printf("\n");
+    }
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
+```
+![image](https://github.com/haridt/contest1/assets/131541155/10ffb7d1-03a5-45b8-984c-fe05701eba11)
+
+
+
 
 
